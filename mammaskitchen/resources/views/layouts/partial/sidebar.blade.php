@@ -2,7 +2,7 @@
 
     <div class="logo">
         <a href="{{ route('welcome') }}" class="simple-text">
-            Mamma's Kitchen
+            Restaurant Mantap
         </a>
     </div>
     <div class="sidebar-wrapper">
@@ -17,6 +17,12 @@
                 <a href="{{ route('employee.index') }}">
                     <i class="material-icons">person</i>
                     <p>Employee</p>
+                </a>
+            </li>
+            <li class="{{ Request::is('admin/table*') ? 'active': '' }}">
+                <a href="{{ route('table.index') }}">
+                    <i class="material-icons">event_seat</i>
+                    <p>Table</p>
                 </a>
             </li>
             <li class="{{ Request::is('admin/slider*') ? 'active': '' }}">
