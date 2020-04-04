@@ -13,6 +13,12 @@
                     <p>Dashboard</p>
                 </a>
             </li>
+            <li class="{{ Request::is('admin/employee*') ? 'active': '' }}">
+                <a href="{{ route('employee.index') }}">
+                    <i class="material-icons">person</i>
+                    <p>Employee</p>
+                </a>
+            </li>
             <li class="{{ Request::is('admin/slider*') ? 'active': '' }}">
                 <a href="{{ route('slider.index') }}">
                     <i class="material-icons">slideshow</i>
