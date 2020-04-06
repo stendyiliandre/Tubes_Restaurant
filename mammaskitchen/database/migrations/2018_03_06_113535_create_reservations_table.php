@@ -20,7 +20,11 @@ class CreateReservationsTable extends Migration
             $table->string('email');
             $table->string('date_and_time');
             $table->string('message');
+            $table->integer('table_number')->unsigned();
             $table->boolean('status');
+            $table->foreign('table_number')
+                ->references('number')->on('tables')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
