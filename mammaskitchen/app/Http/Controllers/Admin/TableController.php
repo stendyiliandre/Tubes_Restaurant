@@ -42,6 +42,8 @@ class TableController extends Controller
         ]);
         $table = new Table();
         $table->status = $request->status;
+        $table->position_x = $request->position_x;
+        $table->position_y = $request->position_y;
         $table->save();
         return redirect()->route('table.index')->with('successMsg','Table Successfully Saved');
     }
@@ -52,7 +54,7 @@ class TableController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($number)
     {
         //
     }
@@ -65,8 +67,8 @@ class TableController extends Controller
      */
     public function edit($number)
     {
-        $table = Table::find($number);
-        return view('admin.table.edit',compact('table'));
+//        $table = Table::find($number);
+//        return view('admin.table.edit',compact('table'));
     }
 
     /**
@@ -76,15 +78,19 @@ class TableController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $number)
-    {
+    public function update(Request $request, $id)
+    {   
         $this->validate($request,[
-            'status' => 'required',
+            'number' => 'required',
+            'position_x' => 'required',
+            'position_y' => 'required',
         ]);
-        $table = Table::find($number);
-        $table->status = $request->status;
+        
+        $table = Table::find($request->number);
+        $table->number = $request->number;
+        $table->position_x = $request->position_x;
+        $table->position_y = $request->position_y;
         $table->save();
-        return redirect()->route('table.index')->with('successMsg','Table Successfully Updated');
     }
 
     /**

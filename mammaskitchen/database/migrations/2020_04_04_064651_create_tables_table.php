@@ -15,6 +15,8 @@ class CreateTablesTable extends Migration
     {
         Schema::create('tables', function (Blueprint $table) {
             $table->increments('number');
+            $table->string('position_x');
+            $table->string('position_y');
             $table->string('status');
             $table->timestamps();
         });
