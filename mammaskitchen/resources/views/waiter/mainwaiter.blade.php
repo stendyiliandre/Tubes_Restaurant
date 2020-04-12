@@ -32,7 +32,10 @@
   		.text-choose{
   			text-align: center;
   		}
-
+  		a:hover{
+  			text-decoration: none;
+  			color: red;
+  		}
   	</style>
 </head>
 <body>
@@ -55,8 +58,10 @@
 		    	</ul>
 		   </li>
 		   <li class="nav-item">
-		      	<img src="{{ asset('frontend/images/back_arrow.png') }}"
-		      	style="width: 50px;height: 50px;margin-left: 800px;">
+			   	<a href="#">
+			      	<img src="{{ asset('frontend/images/back_arrow.png') }}"
+			      	style="width: 50px;height: 50px;margin-left: 850px;">
+			    </a>
 		   </li>
 		 </ul>
 		</nav>
@@ -64,15 +69,19 @@
 
 		<div class="main-choose" >
 			<div class="choose1">
-				<img src="{{ asset('frontend/images/Order.png') }}"
-		      	style="width: 470px;height: 400px;">
-		      	<p class="text-choose"><font size="5">Order</font></p>
+				<a href="/order">
+					<img src="{{ asset('frontend/images/Order.png') }}"
+			      	style="width: 470px;height: 400px;">
+			      	<p class="text-choose" style="color: black;"><font size="5">Order</font></p>
+			    </a>
 			</div>
 			<div class="choose2">
-				<img src="{{ asset('frontend/images/Reserve.png') }}"
-		      	style="width: 350px;height: 350px;">
-		      	<p class="text-choose" style="margin-top: 20px"><font size="5">
-		      		Reserve</font></p>
+				<a href="/reserve">
+					<img src="{{ asset('frontend/images/Reserve.png') }}"
+			      	style="width: 350px;height: 350px;">
+			      	<p class="text-choose" style="margin-top: 20px; color: black"><font size="5">
+			      		Reserve</font></p>
+			    </a>
 			</div>
 		</div>
 	</body>

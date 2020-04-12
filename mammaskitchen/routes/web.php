@@ -14,6 +14,8 @@ Route::redirect('lara-admin','login');
 Route::get('/','auth\SigninController@index')->name('signin');
 Route::get('/welcome','HomeController@index')->name('welcome');
 Route::get('/waiter','WaiterController@index')->name('mainwaiter');
+Route::get('/reserve','WaiterController@reserve')->name('reserve');
+Route::get('/order','WaiterController@order')->name('ordermenu');
 Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
 Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 

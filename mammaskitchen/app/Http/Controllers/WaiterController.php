@@ -19,5 +19,14 @@ class WaiterController extends Controller
     {
         return view('waiter.mainwaiter');
     }
+
+    public function order()
+    {
+        return view('waiter.ordermenu');
+    }
+    public function reserve()
+    {
+        return view('waiter.reserve');
+    }
 }
 
