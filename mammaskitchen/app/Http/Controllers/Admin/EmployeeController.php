@@ -39,11 +39,15 @@ class EmployeeController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
             'job' => 'required',
             'salary' => 'required',
         ]);
         $employee = new Employee();
         $employee->name = $request->name;
+        $employee->email = $request->email;
+        $employee->password = $request->password;
         $employee->job = $request->job;
         $employee->salary = $request->salary;
         $employee->save();
@@ -84,11 +88,13 @@ class EmployeeController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
+            'password' => 'required',
             'job' => 'required',
             'salary' => 'required',
         ]);
         $employee = Employee::find($id);
         $employee->name = $request->name;
+        $employee->password = $request->password;
         $employee->job = $request->job;
         $employee->salary = $request->salary;
         $employee->save();

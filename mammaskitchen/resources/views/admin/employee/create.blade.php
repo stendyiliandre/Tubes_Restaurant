@@ -14,7 +14,7 @@
                     @include('layouts.partial.msg')
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
-                            <h4 class="title">Add New Item</h4>
+                            <h4 class="title">Add New Employee</h4>
                         </div>
                         <div class="card-content">
                             <form method="POST" action="{{ route('employee.store') }}" enctype="multipart/form-data">
@@ -28,6 +28,22 @@
                                         <div class="form-group label-floating">
                                             <label class="control-label">Name</label>
                                             <input type="text" class="form-control" name="name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Email</label>
+                                            <input type="email" class="form-control" name="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Password</label>
+                                            <input type="password" class="form-control" name="password">
                                         </div>
                                     </div>
                                 </div>

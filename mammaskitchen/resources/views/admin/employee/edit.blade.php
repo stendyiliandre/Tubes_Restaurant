@@ -31,6 +31,22 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group label-floating">
+                                            <label class="control-label">Password</label>
+                                            <input type="password" class="form-control" value="{{ $employee->password }}" name="password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Email</label>
+                                            <input type="text" class="form-control" value="{{ $employee->email }}" name="email" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
                                             <label class="control-label">Job</label>
                                             <select class="form-control" name="job">
                                                 <option value="Waiter/Waitress">Waiter/Waitress</option>

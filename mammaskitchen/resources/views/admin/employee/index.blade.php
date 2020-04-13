@@ -22,6 +22,8 @@
                                 <thead class="text-primary">
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Email</th>
+                                <th>Password</th>
                                 <th>Job</th>
                                 <th>Salary</th>
                                 <th>Created At</th>
@@ -32,6 +34,8 @@
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $employee->name }}</td>
+                                            <td>{{ $employee->email }}</td>
+                                            <td>{{ $employee->password }}</td>
                                             <td>{{ $employee->job }}</td>
                                             <td>{{ $employee->salary }}</td>
                                             <td>{{ $employee->created_at }}</td>
